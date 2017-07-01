@@ -1,0 +1,30 @@
+{
+  "name": "todo-app",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.7"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "description": "This is my first Project on github(Todo-App)",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sh0024/Todo-App.git"
+  },
+  "author": "This is my first project on github",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sh0024/Todo-App/issues"
+  },
+  "homepage": "https://github.com/sh0024/Todo-App#readme"
+}
