@@ -22,7 +22,7 @@ class App extends Component {
   render() {
     const todos=this.state.todos;
     return (
-      <div>
+      <div >
         <Header/>
         <Input addTodo={this.addTodo}/>
         <TodoList  todos={todos}/>

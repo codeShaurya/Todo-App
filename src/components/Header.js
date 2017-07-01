@@ -2,7 +2,7 @@
  * Created by shubham on 27/6/17.
  */
 import React, { Component } from 'react';
-import './style/Header.css';
+import './style/index.css';
 import logo from './logo.svg';
 
 
@@ -12,10 +12,10 @@ class Header extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <h2>Welcome to TODO APP</h2>
         </div>
         <p className="App-intro">
-          This is a Todo APP
+        Here,You can add your work
         </p>
       </div>
     );
