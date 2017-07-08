@@ -22,7 +22,7 @@ class Input extends Component {
   onSubmit(e) {
     e.preventDefault();
     const todo={
-      task:this.text.value};
+      text:this.text.value};
     this.props.addTodo(todo);
 
 

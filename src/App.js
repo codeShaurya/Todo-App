@@ -10,22 +10,27 @@ class App extends Component {
 
     // getinitialState
     this.state = {
-      todos: {},
+      todos: {}
     };
   }
   addTodo(todo){
     const timestamp = Date.now();
     const todos = {...this.state.todos};
-    todos[`${timestamp}`] = todo;
+    todos[`todo-${timestamp}`] = todo;
     this.setState({ todos });
   }
   render() {
-    const todos=this.state.todos;
     return (
       <div >
         <Header/>
         <Input addTodo={this.addTodo}/>
-        <TodoList  todos={todos}/>
+        <ul >
+          {
+            Object
+              .keys(this.state.todos)
+              .map(key => <TodoList key={key} todo={this.state.todos[key]}/>)
+          }
+        </ul>
       </div>
     );
   }

@@ -5,14 +5,12 @@ import React from 'react';
 
 class TodoList extends React.Component {
   render() {
-    const { todos} = this.props;
-    console.log(todos);
-    return (
+    const {todo}= this.props;
+        return (
       <div>
         <ul>
-          hii the todo list  will be soon here.
-
-        </ul>
+         <li> {todo.text}</li>
+          </ul>
       </div>
     )
   }
