@@ -7,7 +7,7 @@ class TodoList extends React.Component {
   render() {
     const {todo}= this.props;
         return (
-      <div>
+      <div className="TodoList">
         <ul>
          <li> {todo.text}</li>
           </ul>

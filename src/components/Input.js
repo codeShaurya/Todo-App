@@ -33,10 +33,12 @@ class Input extends Component {
 
   render() {
     return (
-      <form  id="myform" onSubmit={(e) => this.onSubmit(e)}>
-        <input type="text" ref={(input) => this.text = input} onChange={this.onChange} value={this.state.text}  />
-        <input type="submit"/>
-      </form>
+      <div className="App">
+        <form  id="myform" onSubmit={(e) => this.onSubmit(e)}>
+          <input type="text" ref={(input) => this.text = input} onChange={this.onChange} value={this.state.text}  />
+          <input type="submit"/>
+        </form>
+      </div>
     );
   }
 }

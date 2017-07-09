@@ -28,3 +28,8 @@ body {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+.TodoList{
+  margin-left: 39%;
+  text-decoration: double;
+
+}
