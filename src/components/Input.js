@@ -21,9 +21,14 @@ class Input extends Component {
   }
   onSubmit(e) {
     e.preventDefault();
-    const todo={
-      text:this.text.value};
-    this.props.addTodo(todo);
+    if (this.text.value === '') {
+      alert("You must write something!");
+    }
+    else{
+      const todo={
+        text:this.text.value};
+      this.props.addTodo(todo);
+    }
 
 
    this.setState({
@@ -34,9 +39,9 @@ class Input extends Component {
   render() {
     return (
       <div className="App">
-        <form  id="myform" onSubmit={(e) => this.onSubmit(e)}>
-          <input type="text" ref={(input) => this.text = input} onChange={this.onChange} value={this.state.text}  />
-          <input type="submit"/>
+        <form  id="myform" className="header" onSubmit={(e) => this.onSubmit(e)}>
+          <input type="text" ref={(input) => this.text = input} onChange={this.onChange} value={this.state.text} placeholder="Enter a task" />
+          <input type="submit" className="addBtn" value="ADD TODO"/>
         </form>
       </div>
     );

@@ -7,6 +7,9 @@ class App extends Component {
   constructor() {
     super();
     this.addTodo = this.addTodo.bind(this);
+    this.removeTodo = this.removeTodo.bind(this);
+    this.editTodo = this.editTodo.bind(this);
+
 
     // getinitialState
     this.state = {
@@ -19,6 +22,16 @@ class App extends Component {
     todos[`todo-${timestamp}`] = todo;
     this.setState({ todos });
   }
+  removeTodo(index){
+      console.log('deleting todo');
+      console.log(index);
+
+  };
+
+  editTodo(index){
+    console.log('editing');
+    console.log(index);
+  }
   render() {
     return (
       <div >
@@ -28,7 +41,9 @@ class App extends Component {
           {
             Object
               .keys(this.state.todos)
-              .map(key => <TodoList key={key} todo={this.state.todos[key]}/>)
+              .map((key, index) => <TodoList index={index} todo={this.state.todos[key]}  removeTodo={this.removeTodo}
+                                             editTodo={this.editTodo}
+              />)
           }
         </ul>
       </div>
