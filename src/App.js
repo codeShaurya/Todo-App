@@ -8,7 +8,6 @@ class App extends Component {
     super();
     this.addTodo = this.addTodo.bind(this);
     this.removeTodo = this.removeTodo.bind(this);
-    this.editTodo = this.editTodo.bind(this);
 
 
     // getinitialState
@@ -22,16 +21,19 @@ class App extends Component {
     todos[`todo-${timestamp}`] = todo;
     this.setState({ todos });
   }
-  removeTodo(index){
-      console.log('deleting todo');
-      console.log(index);
-
+  removeTodo(itemTobeDeleted){
+      const todos=this.state.todos;
+      const key=Object.keys(todos);
+      const newkey=key.filter((key)=>{
+          if(todos[key]!==itemTobeDeleted){
+              return todos[key];
+          }});
+      const newTodo=newkey.map((key)=>{
+          return todos[key];
+      });
+      this.setState({todos:newTodo});
   };
 
-  editTodo(index){
-    console.log('editing');
-    console.log(index);
-  }
   render() {
     return (
       <div >
@@ -41,8 +43,7 @@ class App extends Component {
           {
             Object
               .keys(this.state.todos)
-              .map((key, index) => <TodoList index={index} todo={this.state.todos[key]}  removeTodo={this.removeTodo}
-                                             editTodo={this.editTodo}
+              .map((key, index) => <TodoList index={index} todo={this.state.todos[key]}  removeTodo={this.removeTodo.bind(this,this.state.todos[key])}
               />)
           }
         </ul>

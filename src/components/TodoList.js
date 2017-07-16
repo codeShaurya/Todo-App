@@ -5,7 +5,6 @@ import React from 'react';
 
 class TodoList extends React.Component {
 
-
   render() {
     const {todo}= this.props;
     const {index}=this.props;
@@ -14,8 +13,7 @@ class TodoList extends React.Component {
         <ul>
          <li key={index + 1}>
            <strong>{todo.text}</strong>
-           <button onClick={() => this.props.removeTodo(index)} >Delete</button>
-           <button onClick={() => this.props.editTodo(index)} >Edit</button>
+           <button onClick={(e) => this.props.removeTodo(e)} >Delete</button>
          </li>
         </ul>
       </div>
