@@ -19,12 +19,12 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sh0024/Todo-App.git"
+    "url": "git+https://github.com/codeShaurya/Todo-App.git"
   },
   "author": "Shubham Maurya",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sh0024/Todo-App/issues"
+    "url": "https://github.com/codeShaurya/Todo-App/issues"
   },
-  "homepage": "https://github.com/sh0024/Todo-App#readme"
+  "homepage": "https://github.com/codeShaurya/Todo-App#readme"
 }
